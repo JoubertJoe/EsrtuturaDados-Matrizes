@@ -12,7 +12,7 @@ public class Matriz {
 		System.out.println("Matriz Aleatória:");
 		for (int linha = 0; linha < 10; linha++) {
 			for (int coluna = 0; coluna < 10; coluna++) {
-				matriz[linha][coluna] = aleatorio.nextInt(3);
+				matriz[linha][coluna] = aleatorio.nextInt(4);
 				matriz2[linha][coluna] = aleatorio.nextInt(3);
 				System.out.print(" " + matriz[linha][coluna] + " ");
 			}
@@ -25,7 +25,7 @@ public class Matriz {
 		for (int linha = 0; linha < 10; linha++) {
 			for (int coluna = 0; coluna < 10; coluna++) {
 				if (linha < coluna) {
-					System.out.print(matriz[linha][coluna]);
+					System.out.print(matriz[linha][coluna]+" ");
 				}else {
 					System.out.print(" ");
 				}
@@ -37,7 +37,7 @@ public class Matriz {
 		for (int linha = 0; linha < 10; linha++) {
 			for (int coluna = 0; coluna < 10; coluna++) {
 				if (linha > coluna) {
-					System.out.print(matriz[linha][coluna]); // Imprimindo apenas o triangulo superior
+					System.out.print(" "+matriz[linha][coluna]+" "); // Imprimindo apenas o triangulo superior
 					}else {
 						System.out.print(" ");
 					}
@@ -50,7 +50,7 @@ public class Matriz {
 		for (int linha = 0; linha < 10; linha++) {
 			for (int coluna = 0; coluna < 10; coluna++) {
 				if (linha == coluna) {
-					System.out.print(matriz[linha][coluna]);
+					System.out.print(" "+matriz[linha][coluna]+" ");
 				}else {
 					System.out.print(" ");
 				}
@@ -62,7 +62,7 @@ public class Matriz {
 		for (int linha = 0; linha < 10; linha++) {
 			for (int coluna = 0; coluna < 10; coluna++) {
 				if (linha + coluna == 9) {
-					System.out.print(matriz[linha][coluna]);
+					System.out.print(" "+matriz[linha][coluna]+" ");
 				}else {
 					System.out.print(" ");
 				}
@@ -81,7 +81,12 @@ public class Matriz {
 				}
 				matriz3[i][j] = resultado;
 				resultado = 0;
-				System.out.print(" " + matriz3[i][j] + " ");
+				if(matriz3[i][j] > 9) {
+					System.out.print(" "+matriz3[i][j]);	
+				}else {
+					System.out.print(" 0"+matriz3[i][j]);
+				}
+				
 			}
 			System.out.println();
 		}
